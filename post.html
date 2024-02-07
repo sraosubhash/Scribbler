@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- TODO: Include Font Awesome file here -->
+    <!-- TODO: Include Google Fonts file here -->
+    <!-- TODO: Include Font Awesome file here -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- TODO: Include Google Fonts file here -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Satisfy"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <!-- Include Css File  -->
+    <link rel="stylesheet" href="../styles/post.css" />
+    <!-- Script File -->
+    <script src="../scripts/post.js"></script>
+    <!-- bootstrap script -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montez|Roboto|Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montez&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--Header-->
+
+    <header>
+      <span class="scrib">ScriBBler</span>
+      <span class="right">
+        <button class="signbtns">Sign Up</button>
+        <button class="signbtns">Sign In</button></span
+      >
+      <p class="sbh">Explore, Imagine, Create</p>
+    </header>
+
+    <!-- Creating post section -->
+    <div id="postSection">
+      <h1 id="titletext">
+        Everything you should know about 'module' and 'require' in Node.js
+      </h1>
+      <div style="display: block; height: 40px">
+        <span>
+          <p id="name" style="float: left; font-size: 28px">James</p>
+          <button
+            type="button"
+            class="btn btn-danger"
+            id="edit"
+            onclick="postEdit()"
+            style="float: right"
+          >
+            Edit <i class="fa fa-edit"></i>
+          </button>
+        </span>
+      </div>
+      <br />
+      <div>
+        <p id="paraText">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+          delectus ipsum veniam sunt perspiciatis sequi, possimus repellat,
+          recusandae odit quaerat unde a eos maxime sint aperiam placeat iure
+          vitae. Illo quod excepturi distinctio eligendi doloremque dolor,
+          inventore atque tenetur! Ad deserunt quisquam beatae in, quod, ipsa
+          similique reiciendis inventore possimus fugiat rerum dolore sunt
+          doloremque, ducimus quas nihil quo excepturi iusto asperiores! Ipsa
+          quam hic laudantium suscipit voluptates facere maxime. Incidunt, hic
+          cumque voluptatibus optio architecto exercitationem quam sit sint
+          necessitatibus, enim expedita esse commodi, eligendi aliquid omnis
+          accusamus rem aspernatur minus. Ipsa, reprehenderit ea ducimus minima
+          inventore alias voluptate fuga tenetur id numquam nihil quaerat
+          perferendis error vero. Cupiditate ipsum, est quod alias sequi libero
+          tenetur quibusdam numquam. Dicta quod, nobis numquam asperiores quidem
+          odit, laudantium doloremque quo iusto necessitatibus ut nostrum sint
+          harum soluta ipsa a laboriosam. Quibusdam deserunt minus cumque
+          laudantium, sapiente, fuga consectetur alias obcaecati veniam aliquid
+          nisi voluptatibus! Ab ipsum et odio nemo molestias possimus! Veritatis
+          ex odio blanditiis culpa voluptate esse libero ab adipisci, impedit,
+          at consequatur hic iusto quos fugiat? Temporibus ducimus mollitia
+          officiis est pariatur molestias impedit illum minima odio alias
+          ratione, cumque dolores odit harum asperiores ut doloremque facilis!
+          Repellat tempora enim placeat nobis rem minima quibusdam quasi, nisi,
+          eum error distinctio voluptatem inventore culpa soluta nesciunt vel
+          perferendis nemo assumenda pariatur fugiat consequatur. Delectus
+          recusandae corporis numquam excepturi odio veniam dolor quos corrupti
+          cupiditate. Sit iusto asperiores quis? Numquam rerum inventore qui
+          delectus vero, neque mollitia ab. Quo, provident culpa.
+        </p>
+      </div>
+      <!--Like Comment Section-->
+      <div class="likeCommentSection">
+        <div class="likeBlogButton">
+          <button
+            type="button"
+            class="btn btn-danger"
+            id="likeBlog"
+            onclick="postLiked()"
+            style="font-size: 12px"
+          >
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i> Like
+          </button>
+          <h5 style="font-family: sans-serif; font-weight: 300" id="likeCount">
+            Be the first one to like this!
+          </h5>
+        </div>
+        <br />
+        <textarea
+          id="userComments"
+          placeholder="Leave a comment..."
+          value=""
+          rows="3"
+          cols="200"
+        ></textarea>
+        <br />
+        <button
+          type="button"
+          class="btn btn-danger"
+          id="addList"
+          onclick="addComments(userComments)"
+          style="font-size: 12px"
+        >
+          Comment
+        </button>
+        <h2
+          style="
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+            text-align: left;
+          "
+        >
+          All Comments
+        </h2>
+        <br />
+        <div id="viewComments">
+          <div id="addEventNames"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
